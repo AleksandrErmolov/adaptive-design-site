@@ -11,8 +11,38 @@ img {
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: Poppins;
+    src: url('../fonts/Poppins-Regular.woff') format('woff');
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url('../fonts/Poppins-Medium.woff') format('woff');
+    font-display: swap;
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: Poppins;
+    src: url('../fonts/Poppins-Bold.woff') format('woff');
+    font-display: swap;
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root {
+    --font-family: 'Poppins', sans-serif;
+}
+
+
+
 body {
-    font-family: '', sans-serif;
+    font-family: var(--font-family);
     font-weight: 400;
 }
 
@@ -27,12 +57,48 @@ body {
     border: 0;
     background-color: transparent;
     cursor: pointer;
+    font-family: 'Poppins', sans-serif;
 }
 
 .container {
     max-width: 1140px;
     padding: 0 15px;
     margin: 0 auto;
+}
+
+.link {
+    display: inline-flex;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1;
+    text-decoration-line: underline;
+    color: #d4d6d4;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+
+.link svg {
+    fill: currentColor;
+    width: 17px;
+    height: 17px;
+}
+
+.link span {
+    text-indent: 10px;
+    border-bottom: 1px solid currentColor;
+}
+
+.link:hover {
+    color: #ffd723
+}
+
+.site-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 46px;
+    color: #4D533C;
 }
 
 .header {
@@ -80,9 +146,42 @@ body {
 }
 
 .hero {
-    padding-top: 100px;
+    padding-top: 189px;
     background-image: url("../img/hero-bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    padding-bottom: 210px;
+}
+
+.hero-content {
+    max-width: 616px;
+    color: white;
+}
+
+.hero-subtitle {
+    display: inline-block;
+    margin-bottom: 22px;
+    font-size: 14px;
+    line-height: 21px;
+
+}
+
+.hero-title {
+    margin: 0;
+    margin-bottom: 24px;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 74px;
+}
+
+.hero-descr {
+    margin: 0;
+    margin-bottom: 45px;
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.hero-link:hover {
+    color: #ffd723
 }
